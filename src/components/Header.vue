@@ -3,16 +3,10 @@
     <img class="logo" src="../assets/images/dc-logo.png" alt="Dc logo">
     <nav>
         <ul class="d-flex justify-content-between">
-            <li>CHARACTERS</li>
-            <li>COMICS</li>
-            <li>MOVIES</li>
-            <li>TV</li>
-            <li>GAMES</li>
-            <li>COLLECTIBLES</li>
-            <li>VIDEOS</li>
-            <li>FANS</li>
-            <li>NEWS</li>
-            <li>SHOP</li>
+            <li class="text-uppercase" v-for="(link, index) in headerNavLinks" :key="index">
+                {{ link }}
+            </li>
+            
         </ul>
     </nav>
   </header>
@@ -20,7 +14,11 @@
 
 <script>
 export default {
-
+    data: function(){
+       return{
+         headerNavLinks: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop']
+       }
+    }
 }
 </script>
 
