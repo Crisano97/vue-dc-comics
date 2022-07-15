@@ -1,6 +1,7 @@
 <template>
   <main>
-    <h1>main</h1>
+    <div class="content"></div>
+    <div class="main-nav"></div>
   </main>
 </template>
 
@@ -11,5 +12,17 @@ export default {
 </script>
 
 <style  lang="scss">
+    @import "../styles/variables.scss";
 
+    div{
+        width: 100%;
+        height: 10rem;
+    }
+
+    div.content {
+        background-color: #1C1C1C;
+    }
+    div.main-nav{
+        background-color: $mainBgColor;
+    }
 </style>
