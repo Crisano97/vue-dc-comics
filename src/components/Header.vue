@@ -3,9 +3,9 @@
     <img class="logo" src="../assets/images/dc-logo.png" alt="Dc logo">
     <nav>
         <ul class="d-flex justify-content-between">
-            <li class="text-uppercase" v-for="(link, index) in headerNavLinks" :key="index">
-                {{ link }}
-            </li>
+            <a :href="link.url" class="text-uppercase" v-for="(link, index) in headerNavLinks" :key="index">
+                {{ link.name }}
+            </a>
             
         </ul>
     </nav>
@@ -16,7 +16,48 @@
 export default {
     data: function(){
        return{
-         headerNavLinks: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop']
+         headerNavLinks: [
+            {
+                name: 'characters',
+                url: '#',
+            },
+            {
+                name: 'comics',
+                url: '#',
+            },
+            {
+                name: 'movies',
+                url: '#',
+            },
+            {
+                name: 'tv',
+                url: '#',
+            },
+            {
+                name: 'games',
+                url: '#',
+            },
+            {
+                name: 'collectibles',
+                url: '#',
+            },
+            {
+                name: 'videos',
+                url: '#',
+            },
+            {
+                name: 'fans',
+                url: '#',
+            },
+            {
+                name: 'news',
+                url: '#',
+            },
+            {
+                name: 'shop',
+                url: '#',
+            },
+         ]
        }
     }
 }
@@ -31,7 +72,9 @@ export default {
                 list-style: none;
                 margin: 0;
 
-                li{
+                a{
+                    color: black;
+                    text-decoration: none;
                     padding: 3rem 0;
                     border-bottom: 3px solid transparent;
                     &:hover {
