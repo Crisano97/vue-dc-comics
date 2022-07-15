@@ -17,13 +17,13 @@ export default {
         padding: 2rem;
 
             div.logo{
-            height: 8rem;
-            width: 10rem;
+            height: 5rem;
+            width: 5rem;
             background-color: aqua;
         }
 
         nav{
-            height: 8rem;
+            height: 5rem;
             width: 50rem;
             background-color: beige;
         }
