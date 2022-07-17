@@ -57,7 +57,7 @@ data: function(){
     div.content {
         background-color: #1C1C1C;
         color: white;
-        padding: 3rem 17.3rem;
+        padding: 3rem 16rem;
 
         span{
             font-size: 1.7rem;
