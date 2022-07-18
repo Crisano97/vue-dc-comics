@@ -1,7 +1,8 @@
 <template>
   <main>
-    <div class="wrapper">
+    <div class="wrapper position-relative">
         <div class="jumbotron"></div>
+        <h4 class="current-series-comics">CURRENT SERIES</h4>
         <div class="cards d-flex justify-content-between flex-wrap">
             <ComicCard v-for="(card, index) in comicCards" 
             :key="index"
@@ -115,7 +116,8 @@ export default {
     @import "../styles/variables.scss";
 
     main{
-        padding: 2rem;
+        padding-bottom: 2rem;
+        // padding: 0 2rem;
     }
 
     div.jumbotron{
@@ -123,6 +125,18 @@ export default {
         background-image: url('../assets/images/jumbotron.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .current-series-comics{
+        background-color: $mainBgColor;
+        width: 15rem;
+        text-align: center;
+        padding: 1rem .5rem;
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 18rem;
+        left: 14.3rem;
     }
 
     div.cards {
@@ -137,7 +151,7 @@ export default {
     .btn-container{
         width: 15rem;
         margin: 0 auto;
-        
+
         .btn-more{
             background-color: $mainBgColor;
             border: none;
