@@ -10,20 +10,11 @@
             :comicSerie="card.series"
             :comicType="card.type"
             />
-
-            <!-- <div class="comic-card" v-for="(card, index) in comicCards" :key="index">
-                <div class="image-container">
-                    <img :src="card.thumb" :alt="card.type">
-                </div>
-                <h6 class="text-uppercase mt-4">
-                    {{ card.series }}
-                </h6>
-            </div> -->
-            
         </div>
-        
-    </div>
-    
+        <div class="btn-container">
+            <button class="btn-more">LOAD MORE</button>    
+        </div>     
+    </div>    
   </main>
 </template>
 
@@ -123,6 +114,10 @@ export default {
 <style  lang="scss" scoped>
     @import "../styles/variables.scss";
 
+    main{
+        padding: 2rem;
+    }
+
     div.jumbotron{
         height: 20rem;
         background-image: url('../assets/images/jumbotron.jpg');
@@ -137,6 +132,19 @@ export default {
         width: 70%;
         margin: 0 auto;
         // height: 30rem;
+    }
+
+    .btn-container{
+        width: 15rem;
+        margin: 0 auto;
+        
+        .btn-more{
+            background-color: $mainBgColor;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: .5rem 3rem;
+        }
     }
     
 </style>
