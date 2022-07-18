@@ -1,6 +1,6 @@
 <template>
   <header class="py-3 bg-white">
-    <div class="wrapper  d-flex justify-content-around align-items-center">
+    <div class="wrapper d-flex justify-content-around align-items-center">
         <img class="logo" src="../assets/images/dc-logo.png" alt="Dc logo">
         <nav>
             <ul class="d-flex justify-content-between">
@@ -65,6 +65,12 @@ export default {
 </script>
 
 <style lang="scss" scoped> 
+
+        .wrapper{
+            width: 80%;
+            margin: 0 auto;
+        }
+
         img{
             width: 5rem;
         }        

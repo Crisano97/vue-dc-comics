@@ -1,7 +1,7 @@
 <template>
   <main>
+    <div class="jumbotron"></div>
     <div class="wrapper position-relative">
-        <div class="jumbotron"></div>
         <h4 class="current-series-comics">CURRENT SERIES</h4>
         <div class="cards d-flex justify-content-between flex-wrap">
             <ComicCard v-for="(card, index) in comicCards" 
@@ -117,7 +117,6 @@ export default {
 
     main{
         padding-bottom: 2rem;
-        // padding: 0 2rem;
     }
 
     div.jumbotron{
@@ -127,6 +126,11 @@ export default {
         background-size: cover;
     }
 
+    .wrapper{
+            width: 80%;
+            margin: 0 auto;
+        }
+
     .current-series-comics{
         background-color: $mainBgColor;
         width: 15rem;
@@ -135,15 +139,15 @@ export default {
         color: white;
         font-weight: bold;
         position: absolute;
-        top: 18rem;
-        left: 14.3rem;
+        top: -2rem;
+        left: 5.3rem;
     }
 
     div.cards {
         // background-color: azure;
         color: white;
-        padding: 3rem 0;
-        width: 70%;
+        padding: 3rem 5.4rem;
+        // width: 70%;
         margin: 0 auto;
         // height: 30rem;
     }

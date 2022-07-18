@@ -1,8 +1,9 @@
 <template>
   <footer>
-    <div class="wrapper">
+
         <div class="footer-top d-flex justify-content-around">
-            <nav>
+            <div class="wrapper">
+                <nav>
                 <div class="list-wrapper d-flex flex-wrap">
                     <ul>
                     <li><a class="text-white fs-4 fw-bold" href="#">DC COMICS</a></li>
@@ -45,21 +46,23 @@
                 </ul>
                 </div>
             </nav>
+            </div>
         </div>
-        <div class="py-4 footer-bottom d-flex justify-content-between">
-            <button class="sign-up">SIGN-UP NOW!</button>
-            <div class="follow d-flex align-items-center justify-content-end">
-                <span>FOLLOW US</span>
-                <div class="img-wrapper d-flex justify-content-around w-50 ms-3">
-                    <img src="../assets/images/footer-facebook.png" alt="">
-                    <img src="../assets/images/footer-twitter.png" alt="">
-                    <img src="../assets/images/footer-youtube.png" alt="">
-                    <img src="../assets/images/footer-pinterest.png" alt="">
-                    <img src="../assets/images/footer-periscope.png" alt="">
+        <div class="py-4 footer-bottom">
+            <div class="container-bottom  d-flex justify-content-between">
+                <button class="sign-up">SIGN-UP NOW!</button>
+                <div class="follow d-flex align-items-center justify-content-end">
+                    <span>FOLLOW US</span>
+                    <div class="img-wrapper d-flex justify-content-around w-50 ms-3">
+                        <img src="../assets/images/footer-facebook.png" alt="">
+                        <img src="../assets/images/footer-twitter.png" alt="">
+                        <img src="../assets/images/footer-youtube.png" alt="">
+                        <img src="../assets/images/footer-pinterest.png" alt="">
+                        <img src="../assets/images/footer-periscope.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
   </footer>
 </template>
 
@@ -76,14 +79,18 @@ export default {
         background-image: url('../assets/images/footer-bg.jpg');
         background-size: cover;
 
-     div.footer-top{
-        width: 100%;
-            // height: 27.5rem;
+        .wrapper{
+            width: 80%;
+            margin: 0 auto;
+        }
 
+     div.footer-top{
+        // width: 100%;
         
         nav{
             padding: 0.7rem;
-            width: 80%;
+            width: 90%;
+            margin: 0 auto;
             background-image: url('../assets/images/dc-logo-bg.png');
             background-repeat: no-repeat;
             background-position: right;
@@ -107,9 +114,14 @@ export default {
     }
 
     div.footer-bottom{
-        padding: 1rem 10rem;
-        width: 100%;
+        // padding: 1rem 10rem;
+        // width: 100%;
         background-color: #303030;
+
+        .container-bottom{
+            width: 70%;
+            margin: 0 auto;
+        }
 
         button.sign-up{
             padding: 0 10px;
@@ -120,12 +132,16 @@ export default {
         }
 
         div.follow{
-            width: 28rem;
+            width: 30rem;
 
             span{
                 color: #0282F9;
                 font-weight: bold;
                 font-size: 1.3rem;
+            }
+
+            img{
+                width: 1.7rem;
             }
         }
     }

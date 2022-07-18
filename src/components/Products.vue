@@ -1,11 +1,13 @@
 <template>
-  <div class="main-nav">
-        <div class="link-wrapper d-flex justify-content-between p-4 align-items-center">
-            <div class="link" v-for="(link, index) in mainLinks" :key="index">
-                <img class="link-img" :src="link.src" :alt="link.text">
-                <span class="text-uppercase ms-2"> {{ link.text }} </span>
-            </div>
-            
+    <div class="wrapper">
+        <div class="main-nav">
+                <div class="link-wrapper d-flex justify-content-between p-4 align-items-center">
+                    <div class="link" v-for="(link, index) in mainLinks" :key="index">
+                        <img class="link-img" :src="link.src" :alt="link.text">
+                        <span class="text-uppercase ms-2"> {{ link.text }} </span>
+                    </div>
+                    
+                </div>
         </div>
     </div>
 </template>
@@ -50,7 +52,7 @@ data: function(){
     div.main-nav{
         
             background-color: $mainBgColor;
-            padding: 1rem 14rem;
+            padding: 1rem 15rem;
 
             div.link{
                 height: fit-content;
@@ -58,7 +60,11 @@ data: function(){
                 color: white;
 
                 .link-img{
-                    width: 3rem;
+                    width: 2.5rem;
+                }
+
+                span{
+                    font-size: 0.8rem;
                 }
             }
         }
