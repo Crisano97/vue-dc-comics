@@ -13,7 +13,7 @@
 export default {
     props:{
         'imageUrl': String,
-        'comicPrice': Number,
+        'comicPrice': String,
         'comicSerie': String,
         'comicType': String,
 
