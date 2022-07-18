@@ -1,9 +1,5 @@
 <template>
-  <main>
-    <div class="content">
-        <span>-->Content goes here</span>
-    </div>
-    <div class="main-nav">
+  <div class="main-nav">
         <div class="link-wrapper d-flex justify-content-between p-4 align-items-center">
             <div class="link" v-for="(link, index) in mainLinks" :key="index">
                 <img class="link-img" :src="link.src" :alt="link.text">
@@ -12,7 +8,6 @@
             
         </div>
     </div>
-  </main>
 </template>
 
 <script>
@@ -46,36 +41,26 @@ data: function(){
 }
 </script>
 
-<style  lang="scss">
+<style lang="scss" scoped>
     @import "../styles/variables.scss";
-
     div{
         width: 100%;
-        // height: 8rem;
     }
 
-    div.content {
-        background-color: #1C1C1C;
-        color: white;
-        padding: 3rem 16rem;
-
-        span{
-            font-size: 1.7rem;
-            font-weight: bold;
-        }
-    }
     div.main-nav{
-        background-color: $mainBgColor;
-        padding: 1rem 17rem;
+        
+            background-color: $mainBgColor;
+            padding: 1rem 14rem;
 
-        div.link{
-            height: fit-content;
-            width: fit-content;
-            color: white;
+            div.link{
+                height: fit-content;
+                width: fit-content;
+                color: white;
 
-            .link-img{
-                width: 3rem;
+                .link-img{
+                    width: 3rem;
+                }
             }
         }
-    }
+
 </style>

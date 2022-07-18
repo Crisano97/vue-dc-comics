@@ -1,22 +1,25 @@
 <template>
   <div id="app">
     <Header />
-    <Main />
+    <ComicCards />
+    <Products />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Main from './components/Main.vue'
-import Footer from './components/Footer.vue'
+import Header from './components/Header.vue';
+import ComicCards from './components/ComicCards.vue';
+import Products from './components/Products.vue'
+import Footer from './components/Footer.vue';
 
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main,
+    ComicCards,
+    Products,
     Footer,
   }
 }
@@ -24,5 +27,8 @@ export default {
 
 <style lang="scss">
     @import "~bootstrap/scss/bootstrap.scss";
+    div#app{
+      background-color: #1C1C1C;
+    }
 
 </style>
