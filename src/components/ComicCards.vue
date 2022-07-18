@@ -144,12 +144,9 @@ export default {
     }
 
     div.cards {
-        // background-color: azure;
         color: white;
         padding: 3rem 5.4rem;
-        // width: 70%;
         margin: 0 auto;
-        // height: 30rem;
     }
 
     .btn-container{

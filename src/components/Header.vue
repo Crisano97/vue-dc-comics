@@ -81,17 +81,14 @@ export default {
                 list-style: none;
                 margin: 0;
 
-                li {
-                    
-                    a{
+                a{
                     color: black;
                     text-decoration: none;
-                    padding: 2.4rem 0;
-                    border-bottom: 3px solid transparent;
+                    padding: 2.5rem 0;
+                    border-bottom: 5px solid transparent;
                     &:hover {
-                        border-bottom: 3px solid blue;
+                        border-bottom: 5px solid blue;
                     }
-                }
                 }
             }
         }

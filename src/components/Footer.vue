@@ -4,46 +4,19 @@
         <div class="footer-top d-flex justify-content-around">
             <div class="wrapper">
                 <nav>
-                <div class="list-wrapper d-flex flex-wrap">
-                    <ul>
-                    <li><a class="text-white fs-4 fw-bold" href="#">DC COMICS</a></li>
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Comics</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">News</a></li>
-                </ul>
-                <ul>
-                    <li><a class="text-white fs-4 fw-bold" href="#">DC</a></li>
-                    <li><a href="#">Therms Of Use</a></li>
-                    <li><a href="#">Primary policy (New)</a></li>
-                    <li><a href="#">Ad Choice</a></li>
-                    <li><a href="#">Adversting</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Subscriptions</a></li>
-                    <li><a href="#">Talent Workshops</a></li>
-                    <li><a href="#">Talent Workshops</a></li>
-                    <li><a href="#">Talent Workshops</a></li>
-                    <li><a href="#">Talent Workshops</a></li>
-                    <li><a href="#">Talent Workshops</a></li>
-                </ul>
-                <ul>
-                    <li><a class="text-white fs-4 fw-bold" href="#">DC COMICS</a></li>
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Comics</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">News</a></li>
-                </ul>
-                <ul>
-                    <li><a class="text-white fs-4 fw-bold" href="#">DC COMICS</a></li>
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Characters</a></li>
-                </ul>
+                <div class="list-wrapper d-flex flex-wrap justify-content-between w-50 pt-4">
+                    <div class="nav-lists" v-for="(navElement, index) in footerNavLinks" :key="index">
+                        <h5 class="text-white fw-bold text-uppercase">
+                            {{ navElement.title }}
+                        </h5>
+                        <ul>
+                            <li v-for="(navLink, navLinkIndex) in navElement.content" :key="navLinkIndex">
+                                <a :href="navLink.url">
+                                    {{ navLink.text }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
             </div>
@@ -68,7 +41,136 @@
 
 <script>
 export default {
-
+    data: function(){
+        return{
+            footerNavLinks: [
+                {
+                    title: 'dc comics',
+                    content: [
+                        {
+                            text: 'Characters',
+                            url: '#',
+                        },
+                        {
+                            text: 'Comics',
+                            url: '#',
+                        },
+                        {
+                            text: 'Movies',
+                            url: '#',
+                        },
+                        {
+                            text: 'TV',
+                            url: '#',
+                        },
+                        {
+                            text: 'Games',
+                            url: '#',
+                        },
+                        {
+                            text: 'Videos',
+                            url: '#',
+                        },
+                        {
+                            text: 'News',
+                            url: '#',
+                        },
+                    ]
+                },
+                {
+                    title: 'dc',
+                    content: [
+                        {
+                            text: 'Therms Of Use',
+                            url: '#',
+                        },
+                        {
+                            text: 'Primary policy (New)',
+                            url: '#',
+                        },
+                        {
+                            text: 'Ad Choic',
+                            url: '#',
+                        },
+                        {
+                            text: 'Adversting',
+                            url: '#',
+                        },
+                        {
+                            text: 'Jobs',
+                            url: '#',
+                        },
+                        {
+                            text: 'Subscriptions',
+                            url: '#',
+                        },
+                        {
+                            text: 'Talent Workshops',
+                            url: '#',
+                        },
+                        {
+                            text: 'CPSC Certificates',
+                            url: '#',
+                        },
+                        {
+                            text: 'Ratings',
+                            url: '#',
+                        },
+                        {
+                            text: 'Shop Help',
+                            url: '#',
+                        },
+                        {
+                            text: 'Contact Us',
+                            url: '#',
+                        },
+                        {
+                            text: 'News',
+                            url: '#',
+                        },
+                    ]
+                },
+                {
+                    title: 'sites',
+                    content: [
+                        {
+                            text: 'DC',
+                            url: '#',
+                        },
+                        {
+                            text: 'MAD Magazine',
+                            url: '#',
+                        },
+                        {
+                            text: 'DC Kids',
+                            url: '#',
+                        },
+                        {
+                            text: 'DC Universe',
+                            url: '#',
+                        },
+                        {
+                            text: 'DC Power Visa',
+                            url: '#',
+                        },
+                    ]
+                },
+                {
+                    title: 'shop',
+                    content: [
+                        {
+                            text: 'Shop DC',
+                            url: '#',
+                        },
+                        {
+                            text: 'Shop DC Collectibles',
+                            url: '#',
+                        },
+                    ]
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -84,9 +186,6 @@ export default {
             margin: 0 auto;
         }
 
-     div.footer-top{
-        // width: 100%;
-        
         nav{
             padding: 0.7rem;
             width: 90%;
@@ -95,27 +194,20 @@ export default {
             background-repeat: no-repeat;
             background-position: right;
 
-            div.list-wrapper {
-                width: 33rem;
-
-                ul{
+            ul{
                 list-style: none;
                 padding: 0 0.2rem;
+                margin-right: 2rem;
                 
                 a{
                     text-decoration: none;
                     color: gray;
                     font-size: 0.8rem;
-                }
-                
-            }
+                }            
             }
         }
-    }
 
     div.footer-bottom{
-        // padding: 1rem 10rem;
-        // width: 100%;
         background-color: #303030;
 
         .container-bottom{
